@@ -12,8 +12,8 @@ class CreateUserSocialsTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('user_socials', function (Blueprint $table) {
+    {}
+       /* Schema::create('user_socials', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsined();
             $table->string('social_network');
@@ -24,7 +24,7 @@ class CreateUserSocialsTable extends Migration
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('social_email')->references('email')->on('users');
-        });
+        });*/
     }
 
     /**
@@ -32,12 +32,12 @@ class CreateUserSocialsTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('user_socials', function(Blueprint $table){
+     function down()
+    {}
+        /*Schema::table('user_socials', function(Blueprint $table)
             $table->$table->dropForeign('user_socials_user_id_foreign');
             $table->$table->dropForeign('user_socials_social_email_foreign');
-        });
+       // });
         Schema::dropIfExists('user_socials');
-    }
-}
+    }*/
+    
