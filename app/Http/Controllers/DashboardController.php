@@ -18,7 +18,7 @@ class DashboardController extends Controller
         $this->validator  = $validator;
 }
 public function index(){
-    return "index logado";
+    return view('user.dashboard');
 }
 
 public function auth(Request $request){
