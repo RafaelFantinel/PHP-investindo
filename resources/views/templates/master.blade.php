@@ -12,7 +12,9 @@
 </head>
 <body>
     @include('templates.menu-lateral')
+    <section id="view-conteudo">
     @yield('conteudo-view')
+    </section>
     @yield('js-view')
 </body>
 </html>
