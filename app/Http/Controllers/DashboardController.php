@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 use Auth;
 use Exception;
-
 class DashboardController extends Controller
 {
     private $repository;
@@ -20,7 +17,6 @@ class DashboardController extends Controller
 public function index(){
     return view('user.dashboard');
 }
-
 public function auth(Request $request){
    
     $data = [

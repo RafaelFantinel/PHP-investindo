@@ -215,3 +215,11 @@ form.form-padrao label.submit input{
 .default-table tbody tr{
 	height: 20px;
 }
+form.form-padrao h3{
+    float: left;
+	width: 100%;
+	color: #5c5c5c;
+	font: 400 1.25em 'Arial';
+    background: transparent;
+    margin-bottom: 10px;
+}
