@@ -1,9 +1,7 @@
 @extends('templates.master')
 @section('conteudo-view')
 @if (session('success'))
-    <h3>{{ session('success') ['messages']}}</h3>
-    @else
-    <h3>Nao houve retorno</h3>
+    <h3>{{ session('success') ['messages']}}</h3>   
     
 @endif
 
@@ -19,6 +17,37 @@
    @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder'=>'Senha']])
    @include('templates.formulario.submit', ['input' => 'Cadastrar'])
     {!! Form::close()!!}
+    <table class="default-table">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>CPF</td>
+                <td>Nome</td>
+                <td>Telefone</td>
+                <td>Nascimento</td>
+                <td>E-mail</td>
+                <td>Status</td>
+                <td>Permissao</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>teste</td>
+                <td>teste</td>
+                <td>teste</td>
+                <td>teste</td>
+                <td>teste</td>
+                <td>teste</td>
+                <td>teste</td>
+                <td>teste</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+
 @endsection
 
 @section('css-view')
