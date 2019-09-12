@@ -13,6 +13,7 @@
    @include('templates.formulario.input', ['input' => 'cpf', 'attributes' => ['placeholder' =>'CPF']])
    @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder'=> 'Nome']])
    @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder'=>'Telefone']])
+   @include('templates.formulario.input', ['input' => 'birth', 'attributes' => ['placeholder'=>'Birth']])
    @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder'=>'E-mail']])
    @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder'=>'Senha']])
    @include('templates.formulario.submit', ['input' => 'Cadastrar'])
@@ -32,18 +33,19 @@
 
         </thead>
         <tbody>
-            <tr>
-                <td>teste</td>
-                <td>teste</td>
-                <td>teste</td>
-                <td>teste</td>
-                <td>teste</td>
-                <td>teste</td>
-                <td>teste</td>
-                <td>teste</td>
+            @foreach ($users as $user)
+                <td>{{$user->id}}</td>
+                <td>{{$user->cpf}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->phone}}</td>
+                <td>{{$user->birth}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->status}}</td>
+                <td>{{$user->permission}}</td>
             </tr>
+            <tr>
+            @endforeach  
         </tbody>
-
     </table>
 
 
