@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
             $table->char('cpf', 11)->unique()->nullalbe();
             $table->string('name', 50);
             $table->char('phone', 11);
-            $table->date('birth')->nullalbe();
+            $table->date('birth');
             $table->char('gender', 1)->nullable();
             $table->text('notes')->nullable();
             //auth data

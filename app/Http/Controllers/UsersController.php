@@ -45,7 +45,9 @@ class UsersController extends Controller
 			'success' 	=> $request['success'],
 			'messages' 	=> $request['messages']
 		]);
-        return redirect()->route('user.index');
+        return view('user.index',[
+            'usuario'=>$usuario,
+        ]);
     }
 
 

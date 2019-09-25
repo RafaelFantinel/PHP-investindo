@@ -47,7 +47,7 @@ class UserService
 		
 			$usuario = $this->repository->delete($user_id);
 			return [
-				'success' 	=> true,
+				'success' 	=> true,				
 				'messages' 	=> "Usuário removido",
 				'data' 	  	=> null,
 			];

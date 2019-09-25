@@ -26,4 +26,4 @@
     </section>
     @yield('js-view')
 </body>
-</html>a
+</html>

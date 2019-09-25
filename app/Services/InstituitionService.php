@@ -12,7 +12,7 @@ class InstituitionService
     private $repository;
     private $validator;
 
-    public __construct(InstituitionRepository $repository, InstituitionValidator $validator){
+    public function __construct(InstituitionRepository $repository, InstituitionValidator $validator){
         $this->repository 	= $repository;
 		$this->validator 	= $validator;
     }
@@ -20,7 +20,9 @@ class InstituitionService
 	{
 		try
 		{
+			
 			$this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
+			$instituition = null;
 			$instituition = $this->repository->create($data);
 			return [
 				'success' 	=> true,
@@ -41,7 +43,7 @@ class InstituitionService
 	}
     }
     
-}
+
 
 
 ?>

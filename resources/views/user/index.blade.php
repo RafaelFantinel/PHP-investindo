@@ -1,8 +1,12 @@
 @extends('templates.master')
 @section('conteudo-view')
-@if (session('success'))
+
+@if (session('success')&&'success'== true)
+<div class="alert alert-success">
     <h3>{{ session('success') ['messages']}}</h3>   
-    
+</div>
+
+
 @endif
 
 
@@ -13,11 +17,15 @@
    @include('templates.formulario.input', ['input' => 'cpf', 'attributes' => ['placeholder' =>'CPF']])
    @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder'=> 'Nome']])
    @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder'=>'Telefone']])
-   @include('templates.formulario.input', ['input' => 'birth', 'attributes' => ['placeholder'=>'Birth']])
+
    @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder'=>'E-mail']])
    @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder'=>'Senha']])
    @include('templates.formulario.submit', ['input' => 'Cadastrar'])
+
     {!! Form::close()!!}
+    <section class="jumbotron text-center">
+    <div class="container">
+            <div class="card mb-4 shadow-sm">
     <table class="default-table">
         <thead>
             <tr>
@@ -54,9 +62,9 @@
             @endforeach  
         </tbody>
     </table>
-
-
-
+            </div>
+    </div>
+    </section>
 @endsection
 
 @section('css-view')
